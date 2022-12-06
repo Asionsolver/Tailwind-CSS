@@ -1,0 +1,48 @@
+* Tailwind Installation
+    1. Install from CDN (Limitation Customization)
+    2. Install as PostCSS Plugin (Not Beginner Friendly)
+    3. Install Tailwind CLI 
+
+
+* Tailwind Installation Process from Tailwind CLI -
+
+Step 01 -
+        CMD: npm init -y
+Step 02 -
+        CMD: npm install -D tailwindcss
+Step 03 -
+        CMD: npx tailwindcss init
+Step 04 -
+        Configure your template paths
+        Add the paths to all of your template files in your tailwind.config.js file.
+        tailwind.config.js file ->
+                            module.exports = {
+                                content: ["./src/**/*.{html,js}"],
+                                theme: {
+                                  extend: {},
+                                },
+                                plugins: [],
+                                }
+Step 05 -
+        Add the Tailwind directives to your CSS
+        Add the @tailwind directives for each of Tailwind’s layers to your main CSS file.
+        src/input.css file ->
+                        @tailwind base;
+                        @tailwind components;
+                        @tailwind utilities;
+Step 06 -
+        Create .vscode/setting.json file ->
+                                            {
+                                                "css.validate": false,
+                                                "tailwindCss.emmetCompletions": true
+                                            }
+Step 07 -
+        Create a build script ->
+        "scripts": {
+            "build": "tailwindcss -i ./src/input.css -o ./out/output.css -w"
+        }
+Step 08 -
+        add line in src/index.html file ->
+        <link href="/out/output.css" rel="stylesheet">
+Step 09 -
+        CMD: npm run build
