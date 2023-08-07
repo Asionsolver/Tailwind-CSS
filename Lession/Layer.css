@@ -1,0 +1,25 @@
+@layer components {
+  .btn {
+    @apply text-sm border-4 px-3 py-2 rounded-full border-white font-semibold text-white shadow-xl focus:ring-offset-4;
+    @apply p-2;
+  }
+
+  .btn-orange {
+    @apply border-orange-200 hover:text-orange-500 hover:bg-white  focus:bg-orange-600 focus:text-white bg-orange-500;
+  }
+  .btn-blue {
+    @apply border-blue-200 hover:text-blue-500 hover:bg-white  focus:bg-blue-600 focus:text-white bg-blue-500;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold text-center;
+  }
+}
+
+@layer utilities {
+  .text-body {
+    font-size: 12px;
+  }
+}
